@@ -2,9 +2,9 @@
 
 book-catalog-service depends on ratings-data-service and book-info-service
 
-exposed the url below
+exposed urls below
 
-localhost:9091//catalog/{userId}
+localhost:9091/catalog/{userId}
 
 book-catalog-service
 	input -> userId
