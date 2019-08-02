@@ -9,6 +9,12 @@ import singh.mahabir.bcs.client.RatingsDataClient;
 import singh.mahabir.bcs.sl.model.Book;
 import singh.mahabir.bcs.sl.model.UserRatings;
 
+/**
+ * Service Layer implementation
+ * 
+ * @author Mahabir Singh
+ *
+ */
 @Service
 @Slf4j
 public class BookCatalogService implements IBookCatalogService {

@@ -4,7 +4,7 @@ import singh.mahabir.bcs.sl.model.Book;
 import singh.mahabir.bcs.sl.model.UserRatings;
 
 /**
- * Service layer of Book Catalog Service
+ * It is service layer of 'Book Catalog Service'
  * 
  * @author Mahabir Singh
  *

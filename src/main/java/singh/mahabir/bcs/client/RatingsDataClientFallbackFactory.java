@@ -13,7 +13,10 @@ import singh.mahabir.bcs.sl.model.UserRating;
 import singh.mahabir.bcs.sl.model.UserRatings;
 
 /**
- * Use FallbackFactory<T> interface to print the feign client exception
+ * While adding this class in @FeignClient fallbackFactory attributes Hystrix
+ * internally uses this class when circuits breaks for default response
+ * 
+ * FallbackFactory<T> interface to print the feign client exception
  * 
  * @author Mahabir Singh
  *

@@ -19,8 +19,7 @@ import singh.mahabir.bcs.sl.model.CatalogResponses;
 import singh.mahabir.bcs.sl.model.UserRatings;
 
 /**
- * BookCatalogServiceEndpoint class implements the IBookCatalogServiceEndpoint
- * and perform the end point work
+ * Implementation of 'book-catalog-service'
  * 
  * @author MahabirSingh
  *

@@ -17,7 +17,6 @@ import singh.mahabir.bcs.sl.model.Book;
  *
  */
 @FeignClient(value = "book-info-service", fallback = BookInfoClientFallback.class)
-//@FeignClient(name="book-info-service",fallback= BookInfoClientFallback.class)
 public interface BookInfoClient {
 
 	/**

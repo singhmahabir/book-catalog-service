@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import singh.mahabir.bcs.sl.model.CatalogResponses;
 
 /**
- * IBookCatalogServiceEndpoint contains endpoint to expose user catalog
+ * Contains endpoint to expose 'user-catalog-service'
  * 
  * @author Mahabir Singh
  *

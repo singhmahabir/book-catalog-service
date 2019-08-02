@@ -44,7 +44,7 @@
 
 	<!-- below dependency is required to use hystrix and fallback is needed. 
 		But this is also not required because spring-cloud-starter-openfeign work 
-		without it mean Feign includes hystrix -->
+		without it mean Feign includes hystrix also -->
 		<!-- <dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
