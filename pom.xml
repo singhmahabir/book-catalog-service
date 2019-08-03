@@ -42,13 +42,20 @@
 		<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
 	</dependency> -->
 
+	<!-- below dependency is required to use hystrix dashboard which is used 
+		for per application -->
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+	</dependency>
+
 	<!-- below dependency is required to use hystrix and fallback is needed. 
 		But this is also not required because spring-cloud-starter-openfeign work 
-		without it mean Feign includes hystrix also -->
-		<!-- <dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-		</dependency> -->
+		without it mean Feign includes hystrix basic fallback  -->
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+	</dependency>
 		
 	<!-- required to run refresh end-point if configuration files get changed 
 		and without restarting you can use the changed values -->

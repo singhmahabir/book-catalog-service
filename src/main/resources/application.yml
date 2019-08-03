@@ -1,3 +1,9 @@
+# we can set active profile from here as well no need to pass at run time
+spring:
+  profiles:
+    active: feign,eureka
+#  main:
+#    banner-mode: off
 # info property details shows in actuators info url http://localhost:8760/actuator/info
 info:
   name: '@project.artifactId@'
@@ -19,20 +25,13 @@ management:
       exposure:
         include: "*"
         exclude:
-        - env
+#        - env
         - beans
-
-# If you are using Admin server and want to registered your application as Admin client then add below configuration. 
-#spring:
-#  boot:
-#    admin:
-#      url: http://localhost:1111
-# below two properties are required when admin server is secured
-#      username: admin
-#      password: admin123 
-
-# when using feign with hystrix
-feign:  hystrix:    enabled: true
+    
+---
+spring:
+  profiles: eureka
+  
 
 eureka:
   client:

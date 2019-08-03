@@ -15,3 +15,8 @@ ratings-data-service (localhost:9093/ratings/{userId} )
 book-info-service (localhost:9092/book/{bookId} )
 	input -> bookId
 	output -> book details for bookId
+
+Hystrix Dashboard
+http://localhost:9091/hystrix	
+Hystrix Stream: http://localhost:9091/actuator/hystrix.stream
+

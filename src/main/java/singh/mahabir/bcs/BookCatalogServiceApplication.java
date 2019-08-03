@@ -2,9 +2,9 @@ package singh.mahabir.bcs;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.context.annotation.Bean;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * Main class to start the book catalog service
@@ -29,24 +29,17 @@ import org.springframework.web.client.RestTemplate;
  *                     Feign is a declarative web service client
  * 
  * @EnableCircuitBreaker It is not required when using @EnableFeignClients
+ * 
+ *                       But Either one of @EnableCircuitBreaker
+ *                       or @EnableHystrix is required to see the hystrix status
+ *                       in either Hystrix dashboard or Turbine dashboard
  *
  */
 @EnableFeignClients
 //@EnableCircuitBreaker
+@EnableHystrixDashboard
+@EnableHystrix
 public class BookCatalogServiceApplication {
-
-	/**
-	 * To call a end point one way to use RestTemplate
-	 * 
-	 * For that we need to create a bean and pass to SpringContaxt and we
-	 * can @Autowired when required
-	 * 
-	 * @return RestTemplate
-	 */
-	@Bean
-	public RestTemplate getRestTemplate() {
-		return new RestTemplate();
-	}
 	
 	public static void main(String[] args) {
 		SpringApplication.run(BookCatalogServiceApplication.class, args);
