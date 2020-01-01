@@ -1,7 +1,7 @@
 # we can set active profile from here as well no need to pass at run time
 spring:
   profiles:
-    active: feign,eureka
+    active: feign,eureka,security #,logging,zipkin
 #  main:
 #    banner-mode: off
 # info property details shows in actuators info url http://localhost:8760/actuator/info
@@ -46,6 +46,7 @@ eureka:
 # https://github.com/spring-cloud/spring-cloud-netflix/blob/master/spring-cloud-netflix-eureka-client/src/main/java/org/springframework/cloud/netflix/eureka/EurekaInstanceConfigBean.java
   instance:
     hostname: localhost
+    instance-id: ${spring.application.name}:${server.port}
     preferIpAddress: true
     leaseRenewalIntervalInSeconds: 3
  

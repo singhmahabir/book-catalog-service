@@ -11,10 +11,10 @@ import lombok.extern.slf4j.Slf4j;
 import singh.mahabir.bcs.sl.model.Book;
 
 /**
- * 
+ *
  * While adding this class in @FeignClient fallback attributes Hystrix
  * internally uses this class when circuits breaks for default response
- * 
+ *
  * @author Mahabir Singh
  *
  */
@@ -22,10 +22,16 @@ import singh.mahabir.bcs.sl.model.Book;
 @Slf4j
 public class BookInfoClientFallback implements BookInfoClient {
 
-	@Override
-	public ResponseEntity<Book> getMoviesDetails(String bookId) {
-		log.info("BookInfoClientFallback returning the default value");
-		return ResponseEntity.ok(new Book(bookId, "", "", "", null));
-	}
+    @Override
+    public ResponseEntity<Book> getMoviesDetails(String bookId) {
+	log.info("BookInfoClientFallback returning the default value");
+	return ResponseEntity.ok(new Book(bookId, "", "", "", null));
+    }
+
+    @Override
+    public ResponseEntity<Book> saveBookDetails(Book book) {
+	log.info("BookInfoClientFallback returning the default Book value");
+	return ResponseEntity.ok(book);
+    }
 
 }
